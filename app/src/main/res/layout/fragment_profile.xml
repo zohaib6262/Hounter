@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32sp"
+    tools:context=".profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:padding="10sp">
+
+                <ImageView
+                    android:id="@+id/display_picture"
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:src="@drawable/house_cardimage" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/display_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20sp"
+                        android:text="username"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:id="@+id/btn_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_primary"
+                        android:text="Info" />
+
+                    <Button
+                        android:id="@+id/btn_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/btn_primary"
+                        android:text="logout" />
+
+
+                </LinearLayout>
+
+            </LinearLayout> <!--profile setup-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="100sp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/liner_gradient"
+                android:layout_marginHorizontal="12sp"
+                android:paddingVertical="16sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:text="Uploads"
+                    android:textAlignment="center"
+                    android:textSize="40sp" />
+
+                <ListView
+                    android:id="@+id/uploadsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:layout_marginHorizontal="50sp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_primary"
+                        android:id="@+id/redirect_to_registry"
+                        android:text="add new post"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+            </LinearLayout> <!--list of properties uploaded vy logged in user-->
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

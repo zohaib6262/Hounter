@@ -4,14 +4,16 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.myapp.R;
-import com.example.myapp.models.property;
+import com.example.hounter.R;
+import com.example.hounter.models.property;
+
 
 public class houseCardAdapter extends ArrayAdapter<property> {
 

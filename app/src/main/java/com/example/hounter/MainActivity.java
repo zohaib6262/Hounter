@@ -8,9 +8,10 @@ import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.hounter.dbControls.propertyControl;
+import com.example.hounter.dbControls.userControl;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        dbPropertyControl = new propertyControl(this);
-        dbUserControl = new userControl(this);
+        propertyControl dbPropertyControl = new propertyControl(this);
+        userControl dbUserControl = new userControl(this);
 
         dbPropertyControl.createTable();
         dbUserControl.createTable();
@@ -34,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent in;
                 if (isLoggedIn)
-                    in = new Intent(splashScreen.this, NavContent.class);
+                    in = new Intent(MainActivity.this, NavContent.class);
                 else
-                    in = new Intent(splashScreen.this, signup.class);
+                    in = new Intent(MainActivity.this, signup.class);
 
                 in.putExtra("fragment", "home");
                 startActivity(in);

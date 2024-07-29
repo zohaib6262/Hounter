@@ -6,13 +6,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.myapp.DBhelpers.propertyHelper;
-import com.example.myapp.R;
-import com.example.myapp.models.property;
+
+import com.example.hounter.DBhelpers.propertyHelper;
+import com.example.hounter.R;
+import com.example.hounter.models.property;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 public class propertyControl {
     private propertyHelper helper;
